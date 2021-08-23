@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="auth.css"/>
+      <script defer src="auth.js"></script>
+      <title>Авторизация</title>
+   </head>
+<body>
+   <h2>Привет <span id = "user-name">"no-name"</span>!</h2>
+   <div class="container" id="container">
+      <!-- регистрация -->
+      <div class="form-container sign-up-container">
+         <form id='reg-form' action="#">
+            <h1>Создать аккаунт</h1>
+            <span id='reg-info-alert'>Введите правильные данные для регистрации</span>
+            <input id='reg-name' type="text" placeholder="Имя и фамилия (через пробел)" />
+            <input id='reg-login' type="text" placeholder="Логин" />
+            <input id='reg-pass' type="password" placeholder="Пароль" />
+            <button id='reg-btn'>Регистрация</button>
+         </form>
+      </div>
+      <!-- войти -->
+      <div class="form-container sign-in-container">
+         <form action="#">
+            <h1>Авторизация</h1>
+            <span id='auth-info-alert'>введите данные вашего аккаунта</span>
+            <input id='auth-login' type="text" placeholder="Логин" />
+            <input id='auth-pass' type="password" placeholder="Пароль" />
+            <a href="#">Забыли пароль?</a>
+            <button id='auth-btn'>Войти</button>
+         </form>
+      </div>
+      <!-- блок переключателя -->
+      <div class="overlay-container">
+         <div class="overlay">
+            <div class="overlay-panel overlay-left">
+               <h1>Уже зарегистрированны?</h1>
+               <p>Вернитесь назад к авторизации</p>
+               <button class="ghost" id="sign-in_link">Войти</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+               <h1>Добро пожаловать!</h1>
+               <p>Войдите в ваш аккаунт либо воспользуйтесь регистрацией</p>
+               <button class="ghost" id="sign-up_link">Зарегистрироваться</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="users-list container">
+      <table class="table">
+	<thead>
+		<tr>
+			<th>Имя</th>
+			<th>Фамилия</th>
+			<th>Логин</th>
+			<th>Пароь</th>
+			<th>Дата регистрации</th>
+			<th>Удалить</th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+   </div>
+</body>
+</html>
